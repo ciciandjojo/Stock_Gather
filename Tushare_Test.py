@@ -46,4 +46,8 @@ sql = "DROP TABLE IF EXISTS industry_classified"
 sql2 = "DROP TABLE IF EXISTS industry"
 engine.execute(sql2)
 engine.execute(sql)
-industry_classified.to_sql(name='industry_classified', con=con, if_exists='replace',index=True)
+# industry_classified.to_sql(name='industry_classified', con=con, if_exists='replace',index=True)
+num = 1
+wocao =  pd.read_sql("SELECT * FROM `000001`", con=engine)
+
+print(type(wocao))
