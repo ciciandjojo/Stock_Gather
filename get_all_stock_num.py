@@ -27,7 +27,8 @@ def getCodes():
     list_num = []
     for stock_a in stock_a_list:
         num = stock_a.text().split('(')[1].strip(')')
-        if (num.startswith('1') or num.startswith('5') or num.startswith('2')): continue  # 只需要6*/0*/3*/2*开头的股票
+        if (num.startswith('1') or num.startswith('5') or num.startswith('2')): continue  # 只需要6*/0*/3*/2*开头的股票0
+
         sname = stock_a.text().split('(')[0]
         record = {}  # 用于存储个股的代码，和名称
         # 进行转码
